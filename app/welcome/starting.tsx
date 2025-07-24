@@ -1,0 +1,21 @@
+import { BestApp } from "./bestapp-showcase";
+import { Navbar } from "./navbar";
+import background from "./images/background.png";
+import { OurCompany } from "./ourcompany";
+import { AppsAndGames } from "./appsAndGames";
+import { GameList } from "./gamelist";
+
+export function Starting() {
+  return (
+    <div className="relative">
+      <img src={background} alt="Logo" className="object-contain" />
+      <div className="absolute inset-0 bg-opacity-50">
+        <Navbar />
+        <BestApp />
+      </div>
+      <OurCompany />
+      <AppsAndGames />
+      <GameList />
+    </div>
+  );
+}
