@@ -4,6 +4,9 @@ import background from "./images/background.png";
 import { OurCompany } from "./ourcompany";
 import { AppsAndGames } from "./appsAndGames";
 import { GameList } from "./gamelist";
+import { SupportedDevices } from "./supporteddevices";
+import { FeedbackList } from "./feedbacklist";
+import { Support } from "./support";
 
 export function Starting() {
   return (
@@ -16,6 +19,9 @@ export function Starting() {
       <OurCompany />
       <AppsAndGames />
       <GameList />
+      <SupportedDevices />
+      <FeedbackList />
+      <Support />
     </div>
   );
 }
