@@ -2,7 +2,7 @@ import background from "./images/bestApp.png";
 
 export const BestApp: React.FC = () => {
   return (
-    <div className="flex justify-between gap-24 items-center text-white px-28 py-6">
+    <div className="flex justify-between gap-24 items-center text-white px-28 py-36">
       <img src={background} alt="Logo" className="object-contain" />
       <div className="">
         <h1 className="text-6xl font-bold">Stay Organized Effortlessly</h1>

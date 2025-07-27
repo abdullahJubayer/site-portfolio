@@ -5,8 +5,9 @@ import { OurCompany } from "./ourcompany";
 import { AppsAndGames } from "./appsAndGames";
 import { GameList } from "./gamelist";
 import { SupportedDevices } from "./supporteddevices";
-import { FeedbackList } from "./feedbacklist";
 import { Support } from "./support";
+import Carousel from "./Carousel";
+import { FeedbackCarousel } from "./feedbackCarousel";
 
 export function Starting() {
   return (
@@ -20,7 +21,8 @@ export function Starting() {
       <AppsAndGames />
       <GameList />
       <SupportedDevices />
-      <FeedbackList />
+      {/* <Carousel />; */}
+      <FeedbackCarousel />
       <Support />
     </div>
   );
