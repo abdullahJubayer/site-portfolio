@@ -17,13 +17,13 @@ export function Starting() {
         <Navbar />
         <BestApp />
       </div>
-      <OurCompany />
+      {/* <OurCompany />
       <AppsAndGames />
       <GameList />
       <SupportedDevices />
-      {/* <Carousel />; */}
+      <Carousel />;
       <FeedbackCarousel />
-      <Support />
+      <Support /> */}
     </div>
   );
 }
