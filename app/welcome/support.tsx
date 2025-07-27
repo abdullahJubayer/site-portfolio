@@ -2,16 +2,16 @@ import type React from "react";
 
 export const Support: React.FC = () => {
   return (
-    <div className="bg-gray-100 px-44 py-24">
-      <div className="text-gray-700 text-center">
-        <h1 className="text-5xl font-bold">Looking For Support?</h1>
-        <h4 className="text-md text-gray-500 mt-4">
+    <div className="bg-gray-100">
+      <div className="text-gray-800 bg-gray-100 text-center px-4 md:px-28 py-16 md:py-24 mt-16 md:mt-24">
+        <h1 className="text-2xl md:text-6xl font-bold">Looking For Support?</h1>
+        <h4 className="text-sm text-gray-400 md:text-md mt-4">
           Got a Question? We'd love to hear from you. Send us a message and we
           will respond you as soon as possible
         </h4>
       </div>
-      <form action="#" className="my-16">
-        <div className="rounded-md flex items-center justify-center gap-16 w-full">
+      <form action="#" className="mx-4 md:mx-28">
+        <div className="flex-col md:flex items-center justify-center gap-16 w-full">
           <div className="flex-1">
             <label
               htmlFor="your_name"
@@ -26,7 +26,7 @@ export const Support: React.FC = () => {
             />
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 mt-4 md:mt-0">
             <label
               htmlFor="your_email"
               className="mb-2 block text-sm font-medium text-gray-900"
@@ -57,15 +57,12 @@ export const Support: React.FC = () => {
         </div>
         <div>
           <hr className="h-px my-8 border-0 bg-gray-300" />
-          <footer className="text-center py-4 text-sm text-gray-500 flex justify-between">
-            <span>
+          <footer className="text-center py-4 text-sm text-gray-500 flex-col md:flex justify-between">
+            <div>
               © 2024 <span className="font-semibold">Mania Puzzle</span>. All
               Rights Reserved.
-            </span>
-            <span>
-              © 2024 <span className="font-semibold">Mania Puzzle</span>. All
-              Rights Reserved.
-            </span>
+            </div>
+            <div>Privacy Policy | Terms of Service</div>
           </footer>
         </div>
       </form>

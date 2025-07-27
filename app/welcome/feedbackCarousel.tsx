@@ -15,20 +15,21 @@ export const FeedbackCarousel = () => {
 
   return (
     <div className="flex flex-col justify-center items-center my-16">
-      <h1 className="text-6xl font-bold text-black">Customers Feedback</h1>
-
-      <div className="relative overflow-hidden rounded-md justify-center items-center py-16">
+      <h1 className="text-2xl md:text-6xl font-bold text-gray-800">
+        Customers Feedback
+      </h1>
+      <div className="relative overflow-hidden">
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {feedback.map((index) => (
-            <div key={index} className="flex-shrink-0 me-1 w-full">
+            <div key={index} className="flex-shrink-0 w-full">
               <Feedback />
             </div>
           ))}
         </div>
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
           {feedback.map((i) => (
             <button
               key={i}

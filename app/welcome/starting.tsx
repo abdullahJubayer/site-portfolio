@@ -11,19 +11,19 @@ import { FeedbackCarousel } from "./feedbackCarousel";
 
 export function Starting() {
   return (
-    <div className="relative">
-      <img src={background} alt="Logo" className="object-contain" />
-      <div className="absolute inset-0 bg-opacity-50">
-        <Navbar />
+    <div>
+      <Navbar />
+      <img src={background} alt="Logo" className="object-contain absolute" />
+      <div className="relative">
         <BestApp />
       </div>
-      {/* <OurCompany />
+      <OurCompany />
       <AppsAndGames />
       <GameList />
       <SupportedDevices />
-      <Carousel />;
+      {/* <Carousel />; */}
       <FeedbackCarousel />
-      <Support /> */}
+      <Support />
     </div>
   );
 }
