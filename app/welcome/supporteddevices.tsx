@@ -2,7 +2,7 @@ import image from "./images/bestApp.png";
 
 export const SupportedDevices: React.FC = () => {
   return (
-    <div className="flex-col md:flex justify-between items-center text-gray-800 bg-gray-100 text-center px-4 md:px-28 py-16 md:py-24 mt-16 md:mt-24">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-16 text-gray-800 bg-gray-100 text-center px-4 md:px-28 py-16 md:py-24 mt-16 md:mt-24">
       <div className="">
         <h1 className="text-2xl md:text-6xl font-bold">
           Available on all your devices

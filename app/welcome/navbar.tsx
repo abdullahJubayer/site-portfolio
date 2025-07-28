@@ -13,7 +13,7 @@ let page = [
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuItemVisible, setIsMenuItemVisible] = useState(false);
+  const [isMenuItemVisible, setIsMenuItemVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,8 +26,8 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`md:px-44 py-4 md:py-8 transition-colors duration-300${
-        scrolled ? "bg-gray-50  text-gray-500" : "bg-transparent  text-gray-100"
+      className={`z-20 md:px-44 py-4 md:py-8 transition-colors duration-300 ${
+        scrolled ? "bg-gray-50 text-gray-500" : "bg-transparent text-gray-100"
       }`}
     >
       <div className="md:flex justify-between items-center relative">
@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
           />
         </div>
         {isMenuItemVisible && (
-          <ul className="absolute md:fixed bg-white md:bg-transparent w-full z-10 flex-1 flex-col md:flex text-md text-center justify-end items-center font-semibold text-gray-600 md:text-gray-100">
+          <ul className="absolute flex flex-col md:flex-row w-full z-10 bg-white md:bg-transparent text-md text-center justify-end items-center font-semibold text-gray-600 md:text-gray-100">
             {page.map((item) => (
               <li
                 key={item}
