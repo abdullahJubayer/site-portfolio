@@ -26,8 +26,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`z-20 md:px-44 py-4 md:py-8 transition-colors duration-300 ${
-        scrolled ? "bg-gray-50 text-gray-500" : "bg-transparent text-gray-100"
+      className={`top-0 z-20 md:px-44 py-4 md:py-8 transition-colors duration-300 w-full ${
+        scrolled
+          ? " sticky bg-gray-50 text-gray-600 "
+          : " absolute bg-transparent text-gray-100 mt-4"
       }`}
     >
       <div className="md:flex justify-between items-center relative">
@@ -49,7 +51,7 @@ export const Navbar: React.FC = () => {
           />
         </div>
         {isMenuItemVisible && (
-          <ul className="absolute flex flex-col md:flex-row w-full z-10 bg-white md:bg-transparent text-md text-center justify-end items-center font-semibold text-gray-600 md:text-gray-100">
+          <ul className="absolute flex flex-col md:flex-row w-full z-10 bg-white md:bg-transparent text-md text-center justify-end items-center font-semibold">
             {page.map((item) => (
               <li
                 key={item}

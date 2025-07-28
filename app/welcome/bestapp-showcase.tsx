@@ -2,7 +2,7 @@ import background from "./images/bestApp.png";
 
 export const BestApp: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center text-center text-gray-800 md:text-white px-4 md:px-44 md:py-24">
+    <div className="flex flex-col md:flex-row justify-between items-center text-center text-gray-800 md:text-white px-4 md:px-44 md:py-36">
       <img
         src={background}
         alt="Logo"
