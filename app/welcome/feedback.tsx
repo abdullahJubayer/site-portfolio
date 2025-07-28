@@ -2,7 +2,7 @@ import image from "./images/bestApp.png";
 
 export const Feedback: React.FC = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center text-gray-800 text-center px-4 md:px-28 py-8 md:py-16">
+    <div className="w-full flex-shrink-0 flex flex-col justify-center items-center text-gray-800 text-center px-4 md:px-28 py-8 md:py-16">
       <img
         src={image}
         alt="Profile"
