@@ -43,25 +43,28 @@ const Carousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative font-inter antialiased">
+    <div className="py-8 md:py-16">
       {/* Inject local animation */}
       <style>{scrollAnimation}</style>
-      <main className="relative min-h-screen flex flex-col justify-center">
-        <div className="text-center">
-          <div className="w-full inline-flex flex-nowrap">
-            <ul
-              ref={logosRef}
-              className="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-[scroll_30s_linear_infinite]"
-            >
-              {logos.map((logo, idx) => (
-                <li key={idx}>
-                  <img src={logo.src} alt={logo.alt} />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </main>
+      <h1 className="text-2xl md:text-6xl font-bold mt-4 text-gray-800 text-center">
+        Awesome Screenshots
+      </h1>
+      <div className="w-full inline-flex flex-nowrap mt-8 md:mt-24">
+        <ul
+          ref={logosRef}
+          className="flex gap-x-4 md:gap-x-16 items-center justify-center md:justify-start [&_img]:max-w-none animate-[scroll_30s_linear_infinite]"
+        >
+          {logos.map((logo, idx) => (
+            <li key={idx}>
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="h-auto max-h-40 md:max-h-80"
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

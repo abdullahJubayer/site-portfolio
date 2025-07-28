@@ -15,7 +15,7 @@ export const FeedbackCarousel = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center my-16">
+    <div className="flex flex-col justify-center items-center my-8">
       <h1 className="text-2xl md:text-6xl font-bold text-gray-800">
         Customers Feedback
       </h1>
@@ -25,7 +25,7 @@ export const FeedbackCarousel = () => {
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {feedback.map((index) => (
-            <Feedback />
+            <Feedback key={index} />
           ))}
         </div>
         <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">

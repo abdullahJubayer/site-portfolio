@@ -21,7 +21,7 @@ export function Starting() {
       <AppsAndGames />
       <GameList />
       <SupportedDevices />
-      {/* <Carousel />; */}
+      <Carousel />;
       <FeedbackCarousel />
       <Support />
     </div>
