@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Feedback } from "./feedback";
+import { pre } from "framer-motion/client";
 
-const feedback = [1, 2, 3, 4, 5];
+const feedback = [1, 2, 3, 4];
 
 export const FeedbackCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -20,17 +21,15 @@ export const FeedbackCarousel = () => {
       </h1>
       <div className="relative overflow-hidden">
         <div
-          className="flex transition-transform duration-700 ease-in-out"
+          className="flex transition-transform duration-700 ease-in-out "
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {feedback.map((index) => (
-            <div key={index} className="flex-shrink-0 w-full">
-              <Feedback />
-            </div>
+            <Feedback />
           ))}
         </div>
         <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
-          {feedback.map((i) => (
+          {feedback.map((_, i) => (
             <button
               key={i}
               className={`w-2 h-2 rounded-full ${

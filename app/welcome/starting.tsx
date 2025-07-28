@@ -22,7 +22,7 @@ export function Starting() {
       <GameList />
       <SupportedDevices />
       {/* <Carousel />; */}
-      {/* <FeedbackCarousel /> */}
+      <FeedbackCarousel />
       <Support />
     </div>
   );
