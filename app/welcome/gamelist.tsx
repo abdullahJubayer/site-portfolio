@@ -1,4 +1,4 @@
-import { GameItem } from "./GameItem";
+import { GameItem } from "./gameItem";
 
 export const GameList: React.FC = () => {
   return (

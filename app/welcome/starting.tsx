@@ -6,8 +6,8 @@ import { AppsAndGames } from "./appsAndGames";
 import { GameList } from "./gamelist";
 import { SupportedDevices } from "./supporteddevices";
 import { Support } from "./support";
-import Carousel from "./Carousel";
 import { FeedbackCarousel } from "./feedbackCarousel";
+import Carousel from "./carousel";
 
 export function Starting() {
   return (
