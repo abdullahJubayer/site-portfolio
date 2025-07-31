@@ -6,7 +6,8 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "vercel-build": "react-router build && mkdir -p api && cp build/server/index.js api/index.js"
   },
   "dependencies": {
     "@react-router/node": "^7.7.0",
