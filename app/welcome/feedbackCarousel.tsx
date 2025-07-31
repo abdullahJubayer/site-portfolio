@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Feedback } from "./feedback";
-import { pre } from "framer-motion/client";
 
 const feedback = [1, 2, 3, 4];
 
