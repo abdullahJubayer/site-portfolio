@@ -51,7 +51,7 @@ const Carousel: React.FC<{ ref: React.RefObject<HTMLDivElement | null> }> = ({
       <h1 className="text-2xl md:text-6xl font-bold mt-4 text-gray-800 text-center">
         Awesome Screenshots
       </h1>
-      <div className="w-full inline-flex flex-nowrap mt-8 md:mt-24">
+      <div className="w-full inline-flex flex-nowrap mt-8 md:mt-24 overflow-hidden">
         <ul
           ref={logosRef}
           className="flex gap-x-4 md:gap-x-16 items-center justify-center md:justify-start [&_img]:max-w-none animate-[scroll_30s_linear_infinite]"

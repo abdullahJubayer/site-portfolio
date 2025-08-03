@@ -15,7 +15,7 @@ export const Navbar: React.FC<{ onNavClick: (section: string) => void }> = ({
   onNavClick,
 }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuItemVisible, setIsMenuItemVisible] = useState(true);
+  const [isMenuItemVisible, setIsMenuItemVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,12 +26,28 @@ export const Navbar: React.FC<{ onNavClick: (section: string) => void }> = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuItemVisible(true);
+      } else {
+        setIsMenuItemVisible(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <nav
-      className={`top-0 z-20 md:px-44 py-4 md:py-8 transition-colors duration-300 w-full ${
+      className={`top-0 z-20 md:px-44 py-4 md:py-8 transition-colors duration-300 w-full text-gray-600 sticky ${
         scrolled
-          ? " sticky bg-gray-50 text-gray-600 "
-          : " absolute bg-transparent text-gray-100 mt-4"
+          ? " bg-gray-50 text-gray-600"
+          : " md:absolute bg-transparent md:text-gray-100 mt-4"
       }`}
     >
       <div className="md:flex justify-between items-center relative">
@@ -59,8 +75,8 @@ export const Navbar: React.FC<{ onNavClick: (section: string) => void }> = ({
                 key={item}
                 className={`px-4 py-2 rounded-md cursor-pointer ${
                   scrolled
-                    ? "hover:bg-gray-200 hover:text-gray-800"
-                    : "hover:bg-[rgba(249,250,251,0.2)] hover:text-gray-600"
+                    ? "md:hover:bg-gray-200"
+                    : "md:hover:bg-[rgba(249,250,251,0.2)]"
                 }`}
                 onClick={() => onNavClick(item)}
               >
