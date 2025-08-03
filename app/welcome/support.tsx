@@ -1,8 +1,10 @@
 import type React from "react";
 
-export const Support: React.FC = () => {
+export const Support: React.FC<{
+  ref: React.RefObject<HTMLDivElement | null>;
+}> = ({ ref }) => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 scroll-mt-32" ref={ref}>
       <div className="text-gray-800 bg-gray-100 text-center px-4 md:px-28 py-16 md:py-24 mt-16 md:mt-24">
         <h1 className="text-2xl md:text-6xl font-bold">Looking For Support?</h1>
         <h4 className="text-sm text-gray-600 md:text-md mt-4">

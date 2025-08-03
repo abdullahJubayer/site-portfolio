@@ -1,6 +1,11 @@
-export const OurCompany: React.FC = () => {
+export const OurCompany: React.FC<{
+  ref: React.RefObject<HTMLDivElement | null>;
+}> = ({ ref }) => {
   return (
-    <div className="text-gray-800 bg-gray-100 text-center px-4 md:px-28 py-8 md:py-16 mt-16 md:mt-8">
+    <div
+      className="text-gray-800 bg-gray-100 text-center px-4 md:px-28 py-8 md:py-16 mt-16 md:mt-8 scroll-mt-32"
+      ref={ref}
+    >
       <h1 className="text-2xl md:text-6xl font-bold">Our Company</h1>
       <h4 className="text-sm text-gray-400 md:text-md mt-4">
         If you’re under the age required to manage your own Google Account, you

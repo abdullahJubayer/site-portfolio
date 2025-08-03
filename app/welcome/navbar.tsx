@@ -11,7 +11,9 @@ let page = [
   "Contact Us",
 ];
 
-export const Navbar: React.FC = () => {
+export const Navbar: React.FC<{ onNavClick: (section: string) => void }> = ({
+  onNavClick,
+}) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuItemVisible, setIsMenuItemVisible] = useState(true);
 
@@ -56,6 +58,7 @@ export const Navbar: React.FC = () => {
               <li
                 key={item}
                 className="hover:bg-[rgba(249,250,251,0.2)] px-4 py-2 rounded-l-sm cursor-pointer"
+                onClick={() => onNavClick(item)}
               >
                 <a>{item}</a>
               </li>

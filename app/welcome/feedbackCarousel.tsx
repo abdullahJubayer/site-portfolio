@@ -3,7 +3,9 @@ import { Feedback } from "./feedback";
 
 const feedback = [1, 2, 3, 4];
 
-export const FeedbackCarousel = () => {
+export const FeedbackCarousel: React.FC<{
+  ref: React.RefObject<HTMLDivElement | null>;
+}> = ({ ref }) => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -14,7 +16,10 @@ export const FeedbackCarousel = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center my-8">
+    <div
+      className="flex flex-col justify-center items-center my-8 scroll-mt-32"
+      ref={ref}
+    >
       <h1 className="text-2xl md:text-6xl font-bold text-gray-800">
         Customers Feedback
       </h1>

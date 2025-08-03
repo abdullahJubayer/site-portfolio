@@ -31,7 +31,9 @@ const scrollAnimation = `
 }
 `;
 
-const Carousel: React.FC = () => {
+const Carousel: React.FC<{ ref: React.RefObject<HTMLDivElement | null> }> = ({
+  ref,
+}) => {
   const logosRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
@@ -43,7 +45,7 @@ const Carousel: React.FC = () => {
   }, []);
 
   return (
-    <div className="py-8 md:py-16">
+    <div className="py-8 md:py-16 scroll-mt-32" ref={ref}>
       {/* Inject local animation */}
       <style>{scrollAnimation}</style>
       <h1 className="text-2xl md:text-6xl font-bold mt-4 text-gray-800 text-center">
