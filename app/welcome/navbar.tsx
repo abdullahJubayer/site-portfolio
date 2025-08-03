@@ -57,7 +57,11 @@ export const Navbar: React.FC<{ onNavClick: (section: string) => void }> = ({
             {page.map((item) => (
               <li
                 key={item}
-                className="hover:bg-[rgba(249,250,251,0.2)] px-4 py-2 rounded-l-sm cursor-pointer"
+                className={`px-4 py-2 rounded-md cursor-pointer ${
+                  scrolled
+                    ? "hover:bg-gray-200 hover:text-gray-800"
+                    : "hover:bg-[rgba(249,250,251,0.2)] hover:text-gray-600"
+                }`}
                 onClick={() => onNavClick(item)}
               >
                 <a>{item}</a>
