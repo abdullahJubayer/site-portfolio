@@ -1,3 +1,26 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "builds": [
+    {
+      "src": "build/server/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "build/client/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/build/client/static/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/build/client/favicon.ico"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "build/server/index.js"
+    }
+  ]
 }
