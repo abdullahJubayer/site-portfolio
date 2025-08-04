@@ -15,7 +15,7 @@ export const Navbar: React.FC<{ onNavClick: (section: string) => void }> = ({
   onNavClick,
 }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuItemVisible, setIsMenuItemVisible] = useState(false);
+  const [isMenuItemVisible, setIsMenuItemVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,10 +44,10 @@ export const Navbar: React.FC<{ onNavClick: (section: string) => void }> = ({
 
   return (
     <nav
-      className={`top-0 z-20 md:px-44 py-4 md:py-8 transition-colors duration-300 w-full text-gray-600 sticky ${
+      className={`top-0 z-20 md:px-44 py-4 md:py-8 transition-colors duration-300 w-full sticky ${
         scrolled
           ? " bg-gray-50 text-gray-600"
-          : " md:absolute bg-transparent md:text-gray-100 mt-4"
+          : " md:absolute bg-transparent text-gray-600 md:text-gray-100 mt-4"
       }`}
     >
       <div className="md:flex justify-between items-center relative">
